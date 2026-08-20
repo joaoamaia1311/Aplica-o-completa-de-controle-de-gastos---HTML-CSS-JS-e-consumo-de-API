@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login - Controle de Gastos</title>
+		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="global.css" />
+	</head>
+	<body class="centrilize">
+		<form>
+			<div class="form-field">
+				<div class="label-email">
+					<label for="email">Email</label>
+				</div>
+				<input
+					type="email"
+					name="email"
+					id="email"
+					placeholder="seuemail@dominio.com"
+					onchange="onChangeEmail()" />
+				<div class="error" id="email-required-error">
+					Email é obrigatório
+				</div>
+				<div class="error" id="email-invalid-error">
+					email é inválido
+				</div>
+			</div>
+			<div class="form-field">
+				<div class="label-password">
+					<label for="password">Senha</label>
+				</div>
+				<input
+					type="password"
+					name="password"
+					placeholder="Senha"
+					id="password"
+					onchange="onChangePassword()" />
+				<div class="error" id="password-required-error">
+					Senha é obrigatória
+				</div>
+			</div>
+			<div class="reset-password-button">
+				<button
+					type="button"
+					class="clear-button"
+					disabled="true"
+					id="reset-password-button"
+					onclick="recoverPassword()">
+					Recuperar senha
+				</button>
+			</div>
+			<div class="login-button">
+				<button
+					type="button"
+					class="solid-button"
+					disabled="true"
+					id="login-button"
+					onclick="login()">
+					Entrar
+				</button>
+			</div>
+			<div class="register-button">
+				<button
+					type="button"
+					class="outline-button"
+					onclick="register()">
+					Registrar
+				</button>
+			</div>
+		</form>
+	</body>
+	<script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-app-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-auth-compat.js"></script>
+	<script src="firebase-init.js"></script>
+	<script src="index.js"></script>
+	<script src="validations.js"></script>
+	<script src="loading.js"></script>
+
+
+</html>
