@@ -1,12 +1,10 @@
 const firebaseConfig = {
-	apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-	authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-	projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-	storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-	messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-	appId: import.meta.env.VITE_FIREBASE_APP_ID,
-	measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+	apiKey: "AIzaSyAkYye_aaeKUlmXqYsjjI3vH1hp8d0sIyI",
+	authDomain: "controle-de-gastos-eade6.firebaseapp.com",
+	projectId: "controle-de-gastos-eade6",
+	storageBucket: "controle-de-gastos-eade6.firebasestorage.app",
+	messagingSenderId: "357300982946",
+	appId: "1:357300982946:web:9342b05ff82180fb1df3fb",
+	measurementId: "G-K74QQZ2LD5",
 };
-
-// Inicializa o Firebase
 firebase.initializeApp(firebaseConfig);
