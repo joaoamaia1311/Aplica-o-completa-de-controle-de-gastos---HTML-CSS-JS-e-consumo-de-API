@@ -1,1 +1,4 @@
 *.ini
+.ini
+firebase-init.js
+*firebase-init.js
