@@ -33,6 +33,16 @@ function addTransactionsToScreen(transactions) {
 		money.innerHTML = formatMoney(transaction.money);
 		li.appendChild(money);
 
+		const type = document.createElement("p");
+		type.innerHTML = transaction.transactionType;
+		li.appendChild(type);
+
+		if (transaction.description) {
+			const description = document.createElement("p");
+			description.innerHTML = transaction.description;
+			li.appendChild(description);
+		}
+
 		orderedList.appendChild(li);
 	});
 }
@@ -50,7 +60,7 @@ const fakeTransactions = [
 		type: "expense",
 		date: "2022-01-04",
 		money: {
-			curency: "R$",
+			currency: "R$",
 			value: 10,
 		},
 		transactionType: "Supermercado",
@@ -59,7 +69,7 @@ const fakeTransactions = [
 		type: "income",
 		date: "2022-01-03",
 		money: {
-			curency: "R$",
+			currency: "R$",
 			value: 5000,
 		},
 		transactionType: "Salário",
@@ -69,7 +79,7 @@ const fakeTransactions = [
 		type: "expense",
 		date: "2022-01-10",
 		money: {
-			curency: "EUR",
+			currency: "EUR",
 			value: 50,
 		},
 		transactionType: "HortiFrut",
@@ -78,7 +88,7 @@ const fakeTransactions = [
 		type: "expense",
 		date: "2022-01-15",
 		money: {
-			curency: "USD$",
+			currency: "USD$",
 			value: 500,
 		},
 		transactionType: "Steam",
